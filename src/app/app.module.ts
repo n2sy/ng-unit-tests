@@ -2,10 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { UserComponent } from './user/user.component';
+import { ReversedPipe } from './reversed.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserComponent,
+    ReversedPipe
   ],
   imports: [
     BrowserModule

@@ -10,22 +10,34 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
 
+  describe('AppComponent', () => {
+    it('should be 0 when negative', () => {
+      let fixture = TestBed.createComponent(AppComponent);
+      let app= fixture.debugElement.componentInstance;
+      //const inst = new AppComponent();
+      //const res = inst.compute(-1);
+      const res = app.compute(-1);
+      expect(res).toBe(0);
+
+    })
+  })
+
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'DMWM-A'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('DMWM-A');
-  });
-
   it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+    let fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to DMWM-A!');
-  });
-});
+    let compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('getc');
+  })
+
+
+
+
+  
+
+ });

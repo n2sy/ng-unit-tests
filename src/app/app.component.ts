@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DMWM-A';
+
+   compute(x : number) : number{
+    if(x<0)
+      return 0;
+    else  
+      return x + 1;
+  }
+
 }
